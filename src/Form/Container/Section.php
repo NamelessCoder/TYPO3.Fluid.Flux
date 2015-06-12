@@ -24,7 +24,7 @@ class Section extends AbstractFormContainer implements ContainerInterface {
 	 * @param array $settings
 	 * @return \NamelessCoder\Flux\Form\Container\Section
 	 */
-	public static function create(array $settings) {
+	public static function create(array $settings = array()) {
 		$section = new Section($settings);
 		if (TRUE === isset($settings['objects'])) {
 			foreach ($settings['objects'] as $fieldName => $objectSettings) {
