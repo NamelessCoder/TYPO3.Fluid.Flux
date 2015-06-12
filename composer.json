@@ -6,7 +6,8 @@
         "namelesscoder/fluid": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "satooshi/php-coveralls": "*"
     },
     "autoload": {
         "psr-4": {
