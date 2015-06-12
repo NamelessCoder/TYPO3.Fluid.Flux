@@ -17,12 +17,4 @@ use NamelessCoder\Flux\Form\FieldInterface;
  */
 class Flex extends AbstractFormField implements FieldInterface {
 
-	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = $this->prepareConfiguration('flex');
-		return $configuration;
-	}
-
 }

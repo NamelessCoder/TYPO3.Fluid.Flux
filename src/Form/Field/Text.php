@@ -37,24 +37,6 @@ class Text extends Input implements FieldInterface {
 	protected $enableRichText = FALSE;
 
 	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = $this->prepareConfiguration('text');
-		$configuration['rows'] = $this->getRows();
-		$configuration['cols'] = $this->getColumns();
-		$configuration['eval'] = $this->getValidate();
-		$defaultExtras = $this->getDefaultExtras();
-		if (TRUE === $this->getEnableRichText() && TRUE === empty($defaultExtras)) {
-			$typoScript = $this->getConfigurationService()->getAllTypoScript();
-			$configuration['defaultExtras'] = $typoScript['plugin']['tx_flux']['settings']['flexform']['rteDefaults'];
-		} else {
-			$configuration['defaultExtras'] = $defaultExtras;
-		}
-		return $configuration;
-	}
-
-	/**
 	 * @param integer $columns
 	 * @return Text
 	 */

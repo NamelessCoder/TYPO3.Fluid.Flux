@@ -13,6 +13,6 @@ use NamelessCoder\Flux\Tests\Unit\ViewHelpers\Field\AbstractFieldViewHelperTestC
 /**
  * @package Flux
  */
-class TextViewHelperTest extends AbstractFieldViewHelperTestCase {
+class InputViewHelperTest extends AbstractFieldViewHelperTestCase {
 
 }

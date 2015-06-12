@@ -9,9 +9,6 @@ namespace NamelessCoder\Flux\Form\Field;
  */
 
 use NamelessCoder\Flux\Form\AbstractMultiValueFormField;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-use TYPO3\CMS\Extbase\Reflection\ObjectAccess;
 
 /**
  * @package Flux
@@ -38,15 +35,6 @@ class Select extends AbstractMultiValueFormField {
 	 * @var boolean|string
 	 */
 	protected $emptyOption = FALSE;
-
-	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = parent::prepareConfiguration('select');
-		$configuration['items'] = $this->getItems();
-		return $configuration;
-	}
 
 	/**
 	 * @param array $items

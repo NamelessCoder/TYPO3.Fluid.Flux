@@ -10,9 +10,6 @@ namespace NamelessCoder\Flux\Form\Container;
 
 use NamelessCoder\Flux\Form\AbstractFormContainer;
 use NamelessCoder\Flux\Form\ContainerInterface;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
-use TYPO3\CMS\Extbase\Reflection\ObjectAccess;
 
 /**
  * @package Flux

@@ -9,11 +9,12 @@ namespace NamelessCoder\Flux\Form\Field;
  */
 
 use NamelessCoder\Flux\Form\AbstractFormField;
+use NamelessCoder\Flux\Form\FieldInterface;
 
 /**
  * @package Flux
  * @subpackage Form\Field
  */
-class Checkbox extends AbstractFormField {
+class Hidden extends AbstractFormField implements FieldInterface {
 
 }

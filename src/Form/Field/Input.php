@@ -10,7 +10,6 @@ namespace NamelessCoder\Flux\Form\Field;
 
 use NamelessCoder\Flux\Form\AbstractFormField;
 use NamelessCoder\Flux\Form\FieldInterface;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * @package Flux

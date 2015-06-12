@@ -9,7 +9,6 @@ namespace NamelessCoder\Flux\Form\Field;
  */
 
 use NamelessCoder\Flux\Form\AbstractMultiValueFormField;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * @package Flux
@@ -41,20 +40,6 @@ class File extends AbstractMultiValueFormField {
 	 * @var boolean
 	 */
 	protected $showThumbnails = FALSE;
-
-	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = $this->prepareConfiguration('group');
-		$configuration['disallowed'] = $this->getDisallowed();
-		$configuration['allowed'] = $this->getAllowed();
-		$configuration['max_size'] = $this->getMaxSize();
-		$configuration['internal_type'] = 'file';
-		$configuration['uploadfolder'] = $this->getUploadFolder();
-		$configuration['show_thumbs'] = $this->getShowThumbnails();
-		return $configuration;
-	}
 
 	/**
 	 * Overrides parent method to ensure properly formatted

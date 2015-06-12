@@ -1,5 +1,5 @@
 <?php
-namespace NamelessCoder\Flux\Tests\Unit\ViewHelpers\Field;
+namespace NamelessCoder\Flux\Tests\Unit\Form\Container;
 
 /*
  * This file is part of the NamelessCoder/Flux project under MIT license.
@@ -8,11 +8,14 @@ namespace NamelessCoder\Flux\Tests\Unit\ViewHelpers\Field;
  * LICENSE.md file that was distributed with this source code.
  */
 
-use NamelessCoder\Flux\Tests\Unit\ViewHelpers\Field\AbstractFieldViewHelperTestCase;
-
 /**
  * @package Flux
  */
-class TextViewHelperTest extends AbstractFieldViewHelperTestCase {
+class ColumnTest extends AbstractContainerTest {
+
+	/**
+	 * @var array
+	 */
+	protected $chainProperties = array('name' => 'test', 'label' => 'Test field', 'rowspan' => 2, 'colspan' => 3);
 
 }

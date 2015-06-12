@@ -17,11 +17,6 @@ use NamelessCoder\Flux\Form\Container\Section;
 use NamelessCoder\Flux\Form\Container\Sheet;
 use NamelessCoder\Flux\Service\FluxService;
 use NamelessCoder\Flux\Utility\ExtensionNamingUtility;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
-use TYPO3\CMS\Extbase\Reflection\ObjectAccess;
-use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 /**
  * @package Flux
@@ -47,7 +42,7 @@ abstract class AbstractFormComponent implements FormInterface {
 	/**
 	 * @var string
 	 */
-	protected $extensionName = 'FluidTYPO3.Flux';
+	protected $extensionName = 'NamelessCoder.Flux';
 
 	/**
 	 * @var ContainerInterface

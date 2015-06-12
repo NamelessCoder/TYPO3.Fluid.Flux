@@ -9,8 +9,6 @@ namespace NamelessCoder\Flux\Form;
  */
 
 use NamelessCoder\Flux\Form\Container\Section;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 
 /**
  * @package Flux

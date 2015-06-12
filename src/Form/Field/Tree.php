@@ -59,26 +59,6 @@ class Tree extends AbstractRelationFormField {
 	protected $width = self::DEFAULT_WIDTH;
 
 	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = $this->prepareConfiguration('select');
-		$configuration['renderMode'] = 'tree';
-		$configuration['treeConfig'] = array(
-			'parentField' => $this->getParentField(),
-			'appearance' => array (
-				'allowRecursiveMode' => $this->getAllowRecursiveMode(),
-				'expandAll' => $this->getExpandAll(),
-				'nonSelectableLevels' => $this->getNonSelectableLevels(),
-				'maxLevels' => $this->getMaxLevels(),
-				'showHeader' => $this->getShowHeader(),
-				'width' => $this->getWidth(),
-			),
-		);
-		return $configuration;
-	}
-
-	/**
 	 * @param string $parentField
 	 * @return Tree
 	 */

@@ -16,12 +16,4 @@ use NamelessCoder\Flux\Form\AbstractInlineFormField;
  */
 class Inline extends AbstractInlineFormField {
 
-	/**
-	 * @return array
-	 */
-	public function buildConfiguration() {
-		$configuration = $this->prepareConfiguration('inline');
-		return $configuration;
-	}
-
 }
