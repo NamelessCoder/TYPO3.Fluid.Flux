@@ -30,14 +30,13 @@ class MetadataViewTest extends UnitTestCase {
 		$context->expects($this->any())->method('getViewHelperVariableContainer')->willReturn($container);
 		$instance = $this->getMock(
 			'NamelessCoder\\Flux\\View\\MetadataView',
-			array('startRendering', 'stopRendering', 'renderSection', 'getOrParseAndStoreTemplate'),
+			array('startRendering', 'stopRendering', 'renderSection'),
 			array($paths, $context)
 		);
 		$form = Form::create();
 		$container->add(AbstractFormViewHelper::SCOPE, AbstractFormViewHelper::SCOPE_VARIABLE_FORM, $form);
 		$instance->setRenderingContext($context);
 		$instance->expects($this->once())->method('startRendering');
-		$instance->expects($this->once())->method('getOrParseAndStoreTemplate')->willReturn(new ParsingState());
 		$instance->expects($this->once())->method('stopRendering');
 		$instance->expects($this->once())->method('renderSection')->with('Test', array('foo' => 'bar'));
 		$result = $instance->getFormFromSection('Test', array('foo' => 'bar'));
