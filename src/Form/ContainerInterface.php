@@ -1,0 +1,54 @@
+<?php
+namespace NamelessCoder\Flux\Form;
+
+/*
+ * This file is part of the NamelessCoder/Flux project under MIT license
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.md file that was distributed with this source code.
+ */
+
+/**
+ * @package Flux
+ * @subpackage Form
+ */
+interface ContainerInterface extends FormInterface {
+
+	/**
+	 * @param string $childName
+	 * @param boolean $recursive
+	 * @param string $requiredClass
+	 * @return FormInterface|FALSE
+	 */
+	public function get($childName, $recursive = FALSE, $requiredClass = NULL);
+
+	/**
+	 * @param FormInterface $child
+	 * @return FormInterface
+	 */
+	public function add(FormInterface $child);
+
+	/**
+	 * @param mixed $childOrChildName
+	 * @return boolean
+	 */
+	public function has($childOrChildName);
+
+	/**
+	 * @param string $childName
+	 * @return FormInterface|FALSE
+	 */
+	public function remove($childName);
+
+	/**
+	 * @param string $transform
+	 * @return ContainerInterface
+	 */
+	public function setTransform($transform);
+
+	/**
+	 * @return string
+	 */
+	public function getTransform();
+
+}

@@ -1,0 +1,16 @@
+{
+    "name": "namelesscoder/flux",
+    "description": "The TYPO3 Fluid metadata engine",
+    "license": ["MIT"],
+    "require": {
+        "namelesscoder/fluid": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NamelessCoder\\Flux\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<phpunit bootstrap="tests/Bootstrap.php"
+	backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        verbose="false">
+
+        <testsuites>
+                <testsuite name="NamelessCoder.Flux Unit">
+                        <directory>tests/Unit</directory>
+                </testsuite>
+                <testsuite name="NamelessCoder.Flux Functional">
+                        <directory>tests/Functional</directory>
+                </testsuite>
+        </testsuites>
+		<filter>
+				<whitelist>
+						<directory>src/</directory>
+						<directory>examples/</directory>
+				</whitelist>
+		</filter>
+</phpunit>
