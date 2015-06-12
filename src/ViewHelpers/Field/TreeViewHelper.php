@@ -35,11 +35,12 @@ class TreeViewHelper extends AbstractRelationFieldViewHelper {
 
 	/**
 	 * Render method
+	 * @param string $type
 	 * @return Tree
 	 */
-	public function getComponent() {
+	public function getComponent($type = 'Tree') {
 		/** @var Tree $tree */
-		$tree = $this->getPreparedComponent('Tree');
+		$tree = $this->getPreparedComponent($type);
 		$tree->setParentField($this->arguments['parentField']);
 		$tree->setAllowRecursiveMode($this->arguments['allowRecursiveMode']);
 		$tree->setExpandAll($this->arguments['expandAll']);
