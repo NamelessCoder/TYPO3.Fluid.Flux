@@ -49,7 +49,7 @@ class FormViewHelper extends AbstractFormViewHelper {
 	public function render() {
 		$extensionName = $this->getExtensionName();
 		$form = Form::create();
-		$container = $form->last();
+		$container = $form;
 		// configure Form instance
 		$form->setId($this->arguments['id']);
 		$form->setName($this->arguments['id']);
@@ -58,7 +58,6 @@ class FormViewHelper extends AbstractFormViewHelper {
 		$form->setEnabled($this->arguments['enabled']);
 		$form->setCompact($this->arguments['compact']);
 		$form->setExtensionName($extensionName);
-		$form->setLocalLanguageFileRelativePath($this->arguments['localLanguageFileRelativePath']);
 		$form->setVariables((array) $this->arguments['variables']);
 		$form->setOptions((array) $this->arguments['options']);
 		if (FALSE === $form->hasOption(Form::OPTION_ICON)) {
